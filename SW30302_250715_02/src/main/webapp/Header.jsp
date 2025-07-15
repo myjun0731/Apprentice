@@ -55,5 +55,8 @@ footer {
 		<a href="4PriceSelect.jsp">강사매출현황</a>
 		<a href="5Index.jsp">홈으로</a>
 	</nav>
+	<footer>
+		<p>상미고 30302</p>
+	</footer>
 </body>
 </html>
