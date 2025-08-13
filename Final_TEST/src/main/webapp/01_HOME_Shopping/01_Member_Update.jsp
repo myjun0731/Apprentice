@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+input[type="text"] {
+	text-align: left;
+	justify-content: center;
+}
+</style>
 </head>
 <body>
 	<%
