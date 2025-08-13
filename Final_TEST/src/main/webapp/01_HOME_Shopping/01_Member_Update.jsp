@@ -19,7 +19,7 @@
 	rs = pstmt.executeQuery();
 	rs.next();
 	%>
-
+	<jsp:include page="/00_Index/00_Index.jsp" />
 	<h2>회원 수정</h2>
 	<form action="01_Member_Update_Detail.jsp" name="form">
 		<table border="1">
