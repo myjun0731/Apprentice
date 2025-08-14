@@ -37,8 +37,8 @@ h2 {
 		<a href = "../10_Golf_Practice/10_Class_Insert.jsp">수강신청</a>&nbsp;&nbsp;
 		<a href = "../11_Grade_Management/11_Each_Grade_List.jsp">개인별성적통계</a>&nbsp;&nbsp;
 		<a href = "../12_Audition_Management/12_Rank_List.jsp">참가자 등수 조회</a>&nbsp;&nbsp;
-		<!-- <a href = 13_Batter_Grade_Check.jsp>개별 타자 성적 조회</a>&nbsp;&nbsp;<br/>
-		<a href = 14_Pizza_Product_Sales_List.jsp>통합매출현황조회</a>&nbsp;&nbsp;
+		<a href = "../13_Batter_Management/13_Batter_Grade_Check.jsp">개별 타자 성적 조회</a>&nbsp;&nbsp;<br/>
+		<!-- <a href = 14_Pizza_Product_Sales_List.jsp>통합매출현황조회</a>&nbsp;&nbsp;
 		<a href = 14_Pizza_Shop_Sales_List.jsp>지점별 매출 현황</a>&nbsp;&nbsp;
 		<a href = 14_Pizza_Total_Sales_List.jsp>상품별 매출 현황</a>&nbsp;&nbsp; -->
 	</nav>
