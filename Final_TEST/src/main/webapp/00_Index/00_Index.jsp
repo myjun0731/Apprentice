@@ -28,10 +28,10 @@ h2 {
 		<a href = "../03_Coffee_Sales/03_Shop_Sales.jsp">매장별 판매액</a>&nbsp;&nbsp;
 		<a href = "../04_Patient_Examination/04_Result_Insert.jsp">검사결과입력</a>&nbsp;&nbsp;
 		<a href = "../04_Patient_Examination/04_Local_Examination_Count.jsp">지역별검사건수</a>&nbsp;&nbsp;
-		<!-- <a href = 05_Menu_List.jsp>메뉴등록/수정</a>&nbsp;&nbsp;
-		<a href = 05_Menu_Total_List.jsp>매출현황</a>&nbsp;&nbsp;
-		<a href = 06_Vote_List.jsp>투표검수조회</a>&nbsp;&nbsp;
-		<a href = 05_Vote_Rank.jsp>후보자등수</a>&nbsp;&nbsp;
+		<a href = "../05_Cafe_Franchise/05_Menu_List.jsp">메뉴등록/수정</a>&nbsp;&nbsp;
+		<a href = "../05_Cafe_Franchise/05_Menu_Total_List.jsp">매출현황</a>&nbsp;&nbsp;
+		<!-- <a href = "../06_Voting/06_Vote_List.jsp">투표검수조회</a>&nbsp;&nbsp;
+		<a href = "../06_Voting/06_Vote_Rank.jsp">후보자등수</a>&nbsp;&nbsp;
 		<a href = 07_Vaccine_Check.jsp>접종예약조회</a>&nbsp;&nbsp;
 		<a href = 09_Shop_Sales_Total_List.jsp>점포별매출현황</a>&nbsp;&nbsp;
 		<a href = 10_Class_Insert.jsp>수강신청</a>&nbsp;&nbsp;

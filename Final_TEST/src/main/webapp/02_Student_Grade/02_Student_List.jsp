@@ -1,13 +1,13 @@
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-table input[type="text"]{
+table input[type="text"] {
 	text-align: left;
 }
 </style>
@@ -37,7 +37,7 @@ table input[type="text"]{
 
 	<jsp:include page="/00_Index/00_Index.jsp" />
 	<section>
-	<h2>학생 성적 조회</h2>
+		<h2>학생 성적 조회</h2>
 		<table border="1" style="text-align: left;">
 			<tr>
 				<th>학번</th>

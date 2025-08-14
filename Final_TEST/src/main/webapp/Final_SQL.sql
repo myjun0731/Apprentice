@@ -190,6 +190,10 @@ insert into tbl_result_9 values('1007', 'T005', '20200101', '2', '20200102', 'N'
 
 
 <--5회 카페 프랜차이즈 관리-->
+drop table sale_tbl_9;
+drop table menu_tbl_9;
+drop table size_tbl_9;
+drop table store_tbl_9;
 create table menu_tbl_9(
 menu_cd varchar2(5) not null primary key,
 menu_nm varchar2(30),
@@ -230,7 +234,7 @@ insert into menu_tbl_9 values('10003', '카페 모카', 4600, '0');
 insert into menu_tbl_9 values('10004', '카라멜 마끼아또', 5100, '0');
 insert into menu_tbl_9 values('10005', '호지 티 라떼', 5400, '1');
 insert into menu_tbl_9 values('10006', '그린 티 라떼', 5400, '1');
-insert into menu_tbl_9 values('10007', '차이 티 라떼', 4600, '1');
+insert into menu_tbl_9 values('10007', '차이 티 라떼', 4100, '1');
 
 insert into size_tbl_9 values('S1', 'short', '0');
 insert into size_tbl_9 values('T1', 'tall', '500');
@@ -252,6 +256,22 @@ insert into sale_tbl_9 values('20190429', '0005', 'B005', '10001', 'G1', 1, '01'
 insert into sale_tbl_9 values('20190429', '0006', 'B005', '10003', 'S1', 2, '02');
 insert into sale_tbl_9 values('20190429', '0007', 'A003', '10002', 'T1', 3, '02');
 insert into sale_tbl_9 values('20190429', '0008', 'B006', '10001', 'S1', 4, '02');
+
+
+
+select
+sa.sale_ymd,
+sa.sale_no,
+st.store_nm,
+me.menu_nm,
+si.size_nm,
+sa.sale_cnt,
+me.price*sa.sale_cnt,
+decode(sa.pay_type, '02', '카드', '01', '현금')
+from 
+menu_tbl_9 me, sale_tbl_9 sa, store_tbl_9 st, size_tbl_9 si
+where sa.menu_cd = me.menu_cd and si.size_cd = sa.size_cd and sa.store_cd = st.store_cd
+order by sa.sale_no
 
 <--6회 지역구 의원 투표 관리 프로그램-->
 create table tbl_vote9(
@@ -656,5 +676,3 @@ insert into tbl_salelist_9 values(100012, 'S005', '2018-12-02', 'AA05', 50);
 insert into tbl_salelist_9 values(100013, 'S004', '2018-12-04', 'AA01', 30);
 insert into tbl_salelist_9 values(100014, 'S004', '2018-12-04', 'AA02', 20);
 insert into tbl_salelist_9 values(100015, 'S004', '2018-12-04', 'AA06', 50);
-
-
