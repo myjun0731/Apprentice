@@ -33,8 +33,8 @@ h2 {
 		<a href = "../06_Voting/06_Vote_List.jsp">투표검수조회</a>&nbsp;&nbsp;
 		<a href = "../06_Voting/06_Vote_Rank.jsp">후보자등수</a>&nbsp;&nbsp;
 		<a href = "../07_Vaccine_Reservation/07_Vaccine_Check.jsp">접종예약조회</a>&nbsp;&nbsp;
-		<!-- <a href = 09_Shop_Sales_Total_List.jsp>점포별매출현황</a>&nbsp;&nbsp;
-		<a href = 10_Class_Insert.jsp>수강신청</a>&nbsp;&nbsp;
+		<a href = "../09_Store_Sales_Management/09_Shop_Sales_Total_List.jsp">점포별매출현황</a>&nbsp;&nbsp;
+		<!-- <a href = 10_Class_Insert.jsp>수강신청</a>&nbsp;&nbsp;
 		<a href = 11_Each_Grade_List.jsp>개인별성적통계</a>&nbsp;&nbsp;
 		<a href = 12_Rank_List.jsp>참가자 등수 조회</a>&nbsp;&nbsp;
 		<a href = 13_Batter_Grade_Check.jsp>개별 타자 성적 조회</a>&nbsp;&nbsp;<br/>

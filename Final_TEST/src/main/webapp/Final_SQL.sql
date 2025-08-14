@@ -381,7 +381,10 @@ insert into tbl_vaccresv_9 values('20210010', '700101-2000010', 'V003', 'H001', 
 
 
 <--9회 편의점 매출관리-->
-create table tbl_goods_9(
+drop table sale_tbl_10;
+drop table tbl_goods_10;
+drop table store_tbl_10;
+create table tbl_goods_10(
 goods_cd number(6) not null primary key,
 goods_nm varchar2(30),
 goods_price number(8),
@@ -389,13 +392,13 @@ cost number(8),
 in_date date
 );
 
-create table store_tbl_9(
+create table store_tbl_10(
 store_cd varchar2(5) not null primary key,
 store_nm varchar2(20),
 store_fg varchar2(1)
 ); 
 
-create table sale_tbl_9(
+create table sale_tbl_10(
 sale_no varchar2(4) not null primary key,
 sale_ymd date not null,
 sale_fg varchar2(1) not null,
@@ -403,39 +406,37 @@ store_cd varchar2(5),
 goods_cd number(6),
 sale_cnt number(3),
 pay_type varchar2(2),
-foreign key(store_cd) references store_tbl_9(store_cd),
-foreign key(goods_cd) references tbl_goods_9(goods_cd)
+foreign key(store_cd) references store_tbl_10(store_cd),
+foreign key(goods_cd) references tbl_goods_10(goods_cd)
 );
 
-insert into tbl_goods_9 values(110001, '라면', 1050, 750, '20190302');
-insert into tbl_goods_9 values(110002, '빵', 1300, 800, '20190302');
-insert into tbl_goods_9 values(110003, '과자', 2000, 1700, '20190302');
-insert into tbl_goods_9 values(110004, '탄산음료', 900, 750, '20190302');
-insert into tbl_goods_9 values(110005, '삼각김밥', 750, 300, '20190302');
-insert into tbl_goods_9 values(110006, '초콜릿', 1500, 1300, '20190302');
-insert into tbl_goods_9 values(110007, '우유', 850, 600, '20190302');
+insert into tbl_goods_10 values(110001, '라면', 1050, 750, '20190302');
+insert into tbl_goods_10 values(110002, '빵', 1300, 800, '20190302');
+insert into tbl_goods_10 values(110003, '과자', 2000, 1700, '20190302');
+insert into tbl_goods_10 values(110004, '탄산음료', 900, 750, '20190302');
+insert into tbl_goods_10 values(110005, '삼각김밥', 750, 300, '20190302');
+insert into tbl_goods_10 values(110006, '초콜릿', 1500, 1300, '20190302');
+insert into tbl_goods_10 values(110007, '우유', 850, 600, '20190302');
 
-insert into store_tbl_9 values('A001', '이태원점', '0');
-insert into store_tbl_9 values('A002', '한남점', '0');
-insert into store_tbl_9 values('A003', '도원점', '0');
-insert into store_tbl_9 values('B001', '혜화점', '1');
-insert into store_tbl_9 values('C001', '방배점', '1');
-insert into store_tbl_9 values('D001', '사당점', '0');
-insert into store_tbl_9 values('D002', '흑석점', '1');
-insert into store_tbl_9 values('E001', '금호점', '0');
+insert into store_tbl_10 values('A001', '이태원점', '0');
+insert into store_tbl_10 values('A002', '한남점', '0');
+insert into store_tbl_10 values('A003', '도원점', '0');
+insert into store_tbl_10 values('B001', '혜화점', '1');
+insert into store_tbl_10 values('C001', '방배점', '1');
+insert into store_tbl_10 values('D001', '사당점', '0');
+insert into store_tbl_10 values('D002', '흑석점', '1');
+insert into store_tbl_10 values('E001', '금호점', '0');
 
-insert into sale_tbl_9 values('0001', '20190325', '1', 'A001', 110001, 2, '02');
-insert into sale_tbl_9 values('0002', '20190325', '1', 'B001', 110003, 2, '02');
-insert into sale_tbl_9 values('0003', '20190325', '1', 'D001', 110003, 1, '01');
-insert into sale_tbl_9 values('0004', '20190325', '1', 'A001', 110006, 5, '02');
-insert into sale_tbl_9 values('0005', '20190325', '1', 'C001', 110006, 2, '02');
-insert into sale_tbl_9 values('0006', '20190325', '2', 'C001', 110003, 2, '02');
-insert into sale_tbl_9 values('0007', '20190325', '1', 'A002', 110005, 4, '02');
-insert into sale_tbl_9 values('0008', '20190325', '1', 'A003', 110004, 4, '02');
-insert into sale_tbl_9 values('0009', '20190325', '1', 'B001', 110001, 2, '01');
-insert into sale_tbl_9 values('0010', '20190325', '1', 'A002', 110006, 1, '02');
-
-
+insert into sale_tbl_10 values('0001', '20190325', '1', 'A001', 110001, 2, '02');
+insert into sale_tbl_10 values('0002', '20190325', '1', 'B001', 110003, 2, '02');
+insert into sale_tbl_10 values('0003', '20190325', '1', 'D001', 110003, 1, '01');
+insert into sale_tbl_10 values('0004', '20190325', '1', 'A001', 110006, 5, '02');
+insert into sale_tbl_10 values('0005', '20190325', '1', 'C001', 110003, 2, '02');
+insert into sale_tbl_10 values('0006', '20190325', '2', 'C001', 110003, 2, '02');
+insert into sale_tbl_10 values('0007', '20190325', '1', 'A002', 110005, 4, '02');
+insert into sale_tbl_10 values('0008', '20190325', '1', 'A003', 110004, 4, '02');
+insert into sale_tbl_10 values('0009', '20190325', '1', 'B001', 110001, 2, '01');
+insert into sale_tbl_10 values('0010', '20190325', '1', 'A002', 110006, 1, '02');
 
 <--골프장관리 -->
 CREATE TABLE TBL_TEACHER_9(
