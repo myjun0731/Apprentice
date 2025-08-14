@@ -326,7 +326,6 @@ insert into tbl_party_9 values('P3', 'C정당', '2010-03-01', '기대표', '02',
 insert into tbl_party_9 values('P4', 'D정당', '2010-04-01', '옥대표', '02', '1111', '0004');
 insert into tbl_party_9 values('P5', 'E정당', '2010-05-01', '임대표', '02', '1111', '0005');
 
-
 <--7회 백신예약 프로그램-->
 create table tbl_jumin_9(
 jumin char(14) not null primary key,
