@@ -258,6 +258,9 @@ insert into sale_tbl_9 values('20190429', '0007', 'A003', '10002', 'T1', 3, '02'
 insert into sale_tbl_9 values('20190429', '0008', 'B006', '10001', 'S1', 4, '02');
 
 <--6회 지역구 의원 투표 관리 프로그램-->
+drop table tbl_vote9;
+drop table tbl_member_9;
+drop table tbl_party_9;
 create table tbl_vote9(
 v_jumin char(13) not null primary key,
 v_name varchar2(20),
@@ -297,7 +300,7 @@ insert into tbl_vote9 values('49010120008', '장유권', '3', '0930', '제1투�
 insert into tbl_vote9 values('79010110009', '정유권', '3', '0930', '제1투표장', 'Y');
 insert into tbl_vote9 values('89010120010', '강유권', '4', '0930', '제1투표장', 'Y');
 insert into tbl_vote9 values('99010110011', '신유권', '5', '0930', '제1투표장', 'Y');
-insert into tbl_vote9 values('79010120012', '오유권', '1', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('79010120012', '오유권', '1', '1330', '제1투표장', 'Y');
 insert into tbl_vote9 values('69010110013', '현유권', '4', '1330', '제2투표장', 'Y');
 insert into tbl_vote9 values('89010110014', '왕유권', '2', '1330', '제2투표장', 'Y');
 insert into tbl_vote9 values('99010110015', '유유권', '3', '1330', '제2투표장', 'Y');
@@ -305,6 +308,11 @@ insert into tbl_vote9 values('79010110016', '한유권', '2', '1330', '제2투�
 insert into tbl_vote9 values('88010110017', '문유권', '4', '1330', '제2투표장', 'Y');
 insert into tbl_vote9 values('99010110018', '양유권', '2', '1330', '제2투표장', 'Y');
 insert into tbl_vote9 values('99010110019', '구유권', '4', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('79010110020', '황유권', '5', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('69010110021', '배유권', '3', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('79010110022', '전유권', '3', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('99010110023', '고유권', '1', '1330', '제2투표장', 'Y');
+insert into tbl_vote9 values('59010110024', '권유권', '3', '1330', '제2투표장', 'Y');
 
 insert into tbl_member_9 values('1', '김후보', 'P1', '1', '6603011999991', '수선화동');
 insert into tbl_member_9 values('2', '이후보', 'P2', '3', '5503011999992', '민들래동');
@@ -317,7 +325,6 @@ insert into tbl_party_9 values('P2', 'B정당', '2010-02-01', '명대표', '02',
 insert into tbl_party_9 values('P3', 'C정당', '2010-03-01', '기대표', '02', '1111', '0003');
 insert into tbl_party_9 values('P4', 'D정당', '2010-04-01', '옥대표', '02', '1111', '0004');
 insert into tbl_party_9 values('P5', 'E정당', '2010-05-01', '임대표', '02', '1111', '0005');
-
 
 
 <--7회 백신예약 프로그램-->
