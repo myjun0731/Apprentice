@@ -543,6 +543,10 @@ insert into tbl_grade_9 values('20220004','S004',90,90,90,90,90);
 
 
 <--오디션 관리 -->
+drop table tbl_artist_9;
+drop table tbl_mento_9;
+drop table tbl_point_9;
+
 create table tbl_artist_9(
 artist_id char(4) not null primary key,
 artist_name varchar2(20),
