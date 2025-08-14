@@ -257,22 +257,6 @@ insert into sale_tbl_9 values('20190429', '0006', 'B005', '10003', 'S1', 2, '02'
 insert into sale_tbl_9 values('20190429', '0007', 'A003', '10002', 'T1', 3, '02');
 insert into sale_tbl_9 values('20190429', '0008', 'B006', '10001', 'S1', 4, '02');
 
-
-
-select
-sa.sale_ymd,
-sa.sale_no,
-st.store_nm,
-me.menu_nm,
-si.size_nm,
-sa.sale_cnt,
-me.price*sa.sale_cnt,
-decode(sa.pay_type, '02', '카드', '01', '현금')
-from 
-menu_tbl_9 me, sale_tbl_9 sa, store_tbl_9 st, size_tbl_9 si
-where sa.menu_cd = me.menu_cd and si.size_cd = sa.size_cd and sa.store_cd = st.store_cd
-order by sa.sale_no
-
 <--6회 지역구 의원 투표 관리 프로그램-->
 create table tbl_vote9(
 v_jumin char(13) not null primary key,
