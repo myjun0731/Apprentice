@@ -487,6 +487,10 @@ INSERT INTO TBL_CLASS_9 VALUES('202203','20002','대구분원',200000,'400');
 
 
 <--성적관리 -->
+drop table tbl_student_9;
+drop table tbl_subject_9;
+drop table tbl_grade_9;
+
 create table tbl_student_9(
 studentid char(8) not null primary key,
 studentname varchar2(20),
