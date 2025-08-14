@@ -653,6 +653,20 @@ foreign key(scode) references tbl_shop_10(scode),
 foreign key(pcode) references tbl_pizza_10(pcode)
 );
 
+
+--
+select
+pi.pcode,
+pi.pname,
+to_char(sum(pi.cost*sa.amount), 'L999,999,999,999')
+from tbl_pizza_10 pi, tbl_shop_10 sh, tbl_salelist_10 sa
+where sa.pcode = pi.pcode and sa.scode = sh.scode
+group by
+pi.pcode,
+pi.pname
+order by to_char(sum(pi.cost*sa.amount), 'L999,999,999,999') desc
+
+--
 insert into tbl_pizza_10 values('AA01', '고르곤졸라피자', 6000);
 insert into tbl_pizza_10 values('AA02', '치즈피자', 6500);
 insert into tbl_pizza_10 values('AA03', '페퍼로니피자', 7000);
