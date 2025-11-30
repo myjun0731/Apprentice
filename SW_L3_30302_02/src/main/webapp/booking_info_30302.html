@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h2 {
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+fieldset {
+	border: 1px solid black;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+legend {
+	font-weight: bold;
+	padding: 0 5px;
+}
+
+.row {
+	margin-bottom: 8px;
+}
+
+label.title {
+	display: inline-block;
+	width: 80px;
+}
+
+.btn-area {
+	text-align: center;
+	margin-top: 10px;
+}
+
+button {
+	padding: 5px 15px;
+	margin: 0 5px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<h2>영화 예매 정보 입력</h2>
+	<form action="#">
+		<fieldset>
+			<legend>예매자 정보</legend>
+			<div class="row">
+				<label class="title">예매자 이름:</label>
+				<input type="text" name="username">
+			</div>
+			<div class="row">
+				<label class="title">연락처:</label> <select name="phone1">
+					<option value="010">010</option>
+					<option value="011">011</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+				</select> - <input type="text" name="phone2" size="4" maxlength="4">
+				- <input type="text" name="phone3" size="4" maxlength="4">
+			</div>
+			<div class="row">
+				<label class="title">이메일:</label>
+				<input type="text" name="email_id">
+				@ <select name="email_domain">
+					<option value="naver.com">naver.com</option>
+					<option value="gmail.com">gmail.com</option>
+					<option value="daum.net">daum.net</option>
+					<option value="direct">직접입력</option>
+				</select>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>예매 정보</legend>
+			<div class="row">
+				<label class="title">상영관:</label>
+				<select name="theater">
+					<option value="1">1관</option>
+					<option value="2">2관</option>
+					<option value="3">3관</option>
+					<option value="4">4관</option>
+					<option value="5">5관</option>
+				</select>
+			</div>
+			<div class="row">
+				<label class="title">영화 선택:</label> <select name="movie">
+					<option value="M001">어벤져스 엔드게임</option>
+					<option value="M002">인사이드 아웃 2</option>
+					<option value="M003">범죄도시 4</option>
+				</select>
+			</div>
+			<div class="row">
+				<label class="title">관람일자:</label> <input type="date" name="book_date">
+			</div>
+			<div class="row">
+				<label class="title">관람시간:</label> <select name="book_time">
+					<option value="10:00">10:00</option>
+					<option value="13:00">13:00</option>
+					<option value="16:00">16:00</option>
+					<option value="19:00">19:00</option>
+				</select>
+			</div>
+			<div class="row">
+				<label class="title">인원 수:</label>
+				<input type="number" name="count" min="1" value="1" style="width: 50px;">
+			</div>
+			<div class="row">
+				<label class="title">좌석 선택:</label>
+				<select name="seat">
+					<option value="A1">A1</option>
+					<option value="A2">A2</option>
+					<option value="B5">B5</option>
+					<option value="C7">C7</option>
+					<option value="D9">D9</option>
+				</select>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>결제 및 확인</legend>
+			<div class="row">
+				<label class="title">결제수단:</label>
+				<input type="radio" name="payment" value="card" checked> 카드결제
+				<input type="radio" name="payment" value="cash"> 현금결제
+				<input type="radio" name="payment" value="mobile"> 모바일결제
+			</div>
+
+			<div class="btn-area">
+				<button type="submit">예매하기</button>
+				<button type="reset">취소</button>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
