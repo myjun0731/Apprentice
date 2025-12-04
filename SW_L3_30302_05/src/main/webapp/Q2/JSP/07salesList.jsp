@@ -24,7 +24,7 @@
 			
 			"select " +
 		    "s.sno, " +
-		    "s.sdate, " +
+		    "to_char(s.sdate, 'yyyy-mm-dd'), " +
 		    "p.pname, " +
 		    "c.cname, " +
 		    "p.price, " +

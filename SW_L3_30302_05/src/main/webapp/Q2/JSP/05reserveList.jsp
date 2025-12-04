@@ -27,7 +27,7 @@
 		    "g.phone, " +
 		    "rm.rno, " +
 		    "rm.rtype, " +
-		    "rs.checkin, " +
+		    "to_char(rs.checkin, 'yyyy-mm-dd'), " +
 		    "rs.nights, " +
 		    "(rm.price * rs.nights) as total_fee " +
 		"from tbl_reserve_25 rs " +
