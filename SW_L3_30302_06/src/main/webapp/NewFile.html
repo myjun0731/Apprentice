@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<title>Insert title here</title>
+    <style>
+	/* 기본 초기화 및 배경 설정 */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "맑은 고딕", sans-serif;
+		background-color: #ffc0cb;
+	}
+	
+	/* 1. 상단 헤더 메뉴 */
+	header {
+		background-color: red;
+		color: white;
+		padding: 5px 20px;
+		font-size: 12px;
+	}
+	
+	/* 메인 */
+	.container {
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+		background-color: #ffc0cb;
+	}
+	
+	/* 메인 이미지 */
+	.main-img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	/* 공통 섹션 스타일 */
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		margin: 20px 0 10px 0;
+		padding-left: 10px;
+		color: black;
+	}
+	
+	h3 {
+		font-size: 18px;
+		font-weight: bold;
+		margin: 15px 0;
+		padding-left: 10px;
+		color: black;
+	}
+	
+	/* 구분선 */
+	hr {
+		border: 0;
+		border-top: 1px solid black;
+		margin: 5px 0;
+	}
+	
+	/* 2. 이용요금 테이블 스타일 */
+	.price-table {
+		width: 100%;
+		border-collapse: collapse;
+		background-color: white;
+		margin-bottom: 20px;
+	}
+	
+	.price-table th {
+		background-color: #e6e6fa;
+		color: blue;
+		padding: 10px;
+		width: 50%;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	.price-table td {
+		padding: 10px 20px;
+		border-bottom: 1px dotted #ccc;
+		font-size: 14px;
+	}
+	
+	.price-row {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	/* 3. 교통안내 스타일 */
+	.transport-box {
+		display: flex;
+		background-color: white;
+		width: 100%;
+	}
+	
+	.transport-col {
+		width: 50%;
+		border: 1px solid #ddd;
+	}
+	
+	.transport-header {
+		background-color: #e6e6fa;
+		color: #0000ff;
+		text-align: center;
+		padding: 10px;
+		font-weight: bold;
+	}
+	
+	.transport-content {
+		padding: 20px;
+		background-color: white;
+		font-size: 12px;
+		min-height: 150px;
+	}
+	
+	/* 지하철 노선 색상 */
+	.line-2 {
+		color: #3db449;
+		font-weight: bold;
+	}
+	
+	.line-8 {
+		color: #e91e63;
+		font-weight: bold;
+	}
+	
+	/* 버스 종류 뱃지 */
+	.bus-badge {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border-radius: 50%;
+		color: white;
+		text-align: center;
+		font-size: 10px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	
+	.green-bus {
+		background-color: #4caf50;
+	}
+	
+	.red-bus {
+		background-color: #f44336;
+	}
+	
+	.blue-bus {
+		background-color: #2196f3;
+	}
+	
+	.gold-bus {
+		background-color: #bcaaa4;
+	}
+	
+	.bus-list {
+		margin-bottom: 15px;
+	}
+	
+	.bus-numbers {
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 45px);
+	}
+	
+	/* 4. 쿠폰 영역 */
+	.coupon-note {
+		font-size: 12px;
+		padding: 5px 10px;
+		border-top: 1px dotted #000;
+		border-bottom: 1px dotted #000;
+		margin: 20px 0;
+	}
+	
+	.coupon-container {
+		margin-bottom: 50px;
+	}
+	
+	.coupon {
+		width: 200px;
+		height: 100px;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-size: 14px;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	
+	.coupon.green {
+		background-color: #90ee90;
+		color: white;
+		border: 1px solid #ddd;
+	}
+	
+	.coupon.yellow {
+		background-color: #ffff00;
+		color: black;
+		border: 1px solid #ddd;
+	}
+</style>
+</head>
+<body>
+
+    <header>
+        테마파크 소개 | 이용안내 | 요금안내 | 개인/단체 예매 | 고객센터 | 공지사항
+    </header>
+
+    <div class="container">
+        <img src="./img/landscape-wallpaper-2560x1080_14.jpg" alt="롯데월드 이미지" class="main-img">
+
+        <h2>이용안내</h2>
+        <hr>
+
+        <h3>1. 이용요금</h3>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>1Day</th>
+                    <th>After4(오후 4시부터 입장)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-right: 1px solid #eee;">
+                        <div class="price-row"><span>일반권</span> <span>---------------------- 62,000원</span></div>
+                        <br>
+                        <div class="price-row"><span>청소년</span> <span>---------------------- 54,000원</span></div>
+                        <br>
+                        <div class="price-row"><span>어린이</span> <span>---------------------- 47,000원</span></div>
+                    </td>
+                    <td>
+                        <div class="price-row"><span>일반권</span> <span>---------------------- 50,000원</span></div>
+                        <br>
+                        <div class="price-row"><span>청소년</span> <span>---------------------- 43,000원</span></div>
+                        <br>
+                        <div class="price-row"><span>어린이</span> <span>---------------------- 36,000원</span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. 교통안내</h3>
+        <div class="transport-box">
+            <div class="transport-col">
+                <div class="transport-header">지하철 이용시</div>
+                <div class="transport-content">
+                    <br><br>
+                    <p><span class="bus-badge" style="background-color:transparent; color:#3db449; border:2px solid #3db449; font-weight:bold; font-size:12px;">②</span> <span class="line-2">2호선</span> 잠실역 4번출구</p>
+                    <p><span class="bus-badge" style="background-color:transparent; color:#e91e63; border:2px solid #e91e63; font-weight:bold; font-size:12px;">⑧</span> <span class="line-8">8호선</span> 잠실역 4번출구</p>
+                </div>
+            </div>
+            <div class="transport-col">
+                <div class="transport-header">버스이용시</div>
+                <div class="transport-content">
+                    <div class="bus-list">
+                        <span class="bus-badge green-bus">지선</span>
+                        <span class="bus-numbers">3217번, 3313번, 3314번, 3315번, 3414번, 4319번</span>
+                    </div>
+                    <div class="bus-list">
+                        <span class="bus-badge red-bus">광역</span>
+                        <span class="bus-numbers">1007-1번, 1100번, 1700번, 2000번, 6900번, 7007번, 8001번</span>
+                    </div>
+                    <div class="bus-list">
+                        <span class="bus-badge blue-bus">간선</span>
+                        <span class="bus-numbers">301번, 341번, 360번, 362번</span>
+                    </div>
+                    <div class="bus-list">
+                        <span class="bus-badge gold-bus">공항</span>
+                        <span class="bus-numbers">6000번, 6006번, 6705번, 6706A번</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coupon-note">
+            ※ 아래 쿠폰을 지참하시면 할인 받으실수 있습니다.
+        </div>
+
+        <div class="coupon-container">
+            <div class="coupon green">
+                자유이용권 30%할인 쿠폰
+            </div>
+            <div class="coupon yellow">
+                일반 어트랙션 5가지 40% 할인 쿠폰
+            </div>
+        </div>
+    </div>
+</body>
+</html>
