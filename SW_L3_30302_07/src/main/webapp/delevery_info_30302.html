@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배송 정보입력</title>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        th, td {
+            border: 1px solid #888;
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        th {
+            width: 120px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            padding: 3px;
+            margin: 2px 0;
+        }
+
+        button {
+            padding: 3px 8px;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-top: 10px;
+            text-align: left;
+        }
+        
+        .email-info {
+            font-size: 12px;
+            color: #555;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>배송 정보입력</h2>
+
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th>배송지 선택</th>
+                <td>
+                    <label><input type="radio" name="addr_type" value="same"> 회원 정보와 동일</label>
+                    <label><input type="radio" name="addr_type" value="new"> 새로운 배송지</label>
+                    <button type="button">주소록보기</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th>받으시는 분</th>
+                <td>
+                    <input type="text" name="receiver_name" placeholder="이름을 입력하세요">
+                </td>
+            </tr>
+
+            <tr>
+                <th>주소</th>
+                <td>
+                    <input type="text" name="zipcode" size="10">
+                    <button type="button">우편번호</button><br>
+                    
+                    <input type="text" name="addr1" placeholder="주소를 입력 하시오" size="40"> 기본주소<br>
+                    
+                    <input type="text" name="addr2" size="40"> 나머지주소 (선택입력가능)
+                </td>
+            </tr>
+
+            <tr>
+                <th>휴대전화</th>
+                <td>
+                    <select name="phone1">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select> -
+                    <input type="text" name="phone2" size="6"> -
+                    <input type="text" name="phone3" size="6">
+                </td>
+            </tr>
+
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <input type="text" name="email_id" size="15"> @
+                    <input type="text" name="email_domain" size="15">
+                    
+                    <select name="email_select" onchange="this.form.email_domain.value=this.value">
+                        <option value="">-이메일 선택-</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="empas.com">empas.com</option>
+                        <option value="korea.com">korea.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="">직접입력</option>
+                    </select>
+
+                    <div class="email-info">
+                        이메일을 통해 주문처리과정을 보내드립니다.<br>
+                        이메일 주소란에는 반드시 수신가능한<br>
+                        이메일주소를 입력해주세요
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th>결제수단</th>
+                <td>
+                    <label><input type="radio" name="payment" value="card" checked> 카드결제</label>
+                    <label><input type="radio" name="payment" value="transfer"> 실시간 계좌이체</label>
+                    <label><input type="radio" name="payment" value="deposit"> 무통장</label>
+                </td>
+            </tr>
+
+            <tr>
+                <th>배송메시지</th>
+                <td>
+                    <input type="text" name="message" placeholder="배송 메시지를 입력하시오" style="width: 80%;">
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-area">
+            <button type="submit">등록완료</button>
+            <button type="reset">다시쓰기</button>
+        </div>
+    </form>
+
+</body>
+</html>
