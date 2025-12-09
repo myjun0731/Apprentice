@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		color: #333;
+		font-size: 13px;
+		min-width: 1000px;
+	}
+	
+	ul {
+		list-style: none;
+	}
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	/* 레이아웃 */
+	.wrap {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	
+	/* [1. 헤더 영역] */
+	header {
+		width: 100%;
+	}
+	
+	.banner {
+		width: 100%;
+		height: 150px;
+		position: relative;
+		overflow: hidden;
+		background-color: #5d7c89;
+		background-image:
+			url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8NGslMjAlRUQlOTIlOEQlRUElQjIlQkR8ZW58MHx8MHx8fDA%3D');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	
+	.banner h1 {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		color: #fff;
+		font-size: 32px;
+		font-weight: bold;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+		padding-left: 10px;
+		z-index: 10;
+	}
+	
+	nav {
+		border-bottom: 1px solid #ccc;
+		margin-top: 10px;
+	}
+	
+	nav ul {
+		display: flex;
+		padding: 10px 0;
+	}
+	
+	nav ul li {
+		margin-right: 30px;
+		font-size: 13px;
+		font-weight: bold;
+		color: #555;
+		cursor: pointer;
+	}
+	
+	nav ul li.active {
+		color: #c00;
+	}
+	
+	.content {
+		padding: 40px 0;
+	}
+	
+	.page-title {
+		font-size: 18px;
+		font-weight: bold;
+		border-bottom: 2px solid #ddd;
+		padding-bottom: 15px;
+		margin-bottom: 40px;
+		color: #333;
+	}
+	
+	.section-row {
+		display: flex;
+		margin-bottom: 50px;
+	}
+	
+	.section-head {
+		width: 180px;
+		font-weight: bold;
+		font-size: 14px;
+		padding-top: 10px;
+	}
+	
+	.section-body {
+		flex: 1;
+	}
+	
+	.profile-info {
+		border-left: 3px solid #c85a4a;
+		padding-left: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: #fcfcfc;
+	}
+	
+	.info-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.info-table td {
+		padding: 8px 0;
+		border: none;
+		font-size: 12px;
+	}
+	
+	.info-table td.label {
+		font-weight: bold;
+		width: 80px;
+		vertical-align: top;
+	}
+	
+	.temple-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-top: 2px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		font-size: 12px;
+	}
+	
+	.temple-table th, .temple-table td {
+		border: 1px solid #e5e5e5;
+		padding: 12px 10px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	.temple-table th {
+		background-color: #f9f9f9;
+		font-weight: bold;
+		color: #555;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.temple-table td.align-left {
+		text-align: left;
+		padding-left: 20px;
+	}
+	
+	.temple-table td.temple-list {
+		text-align: left;
+		line-height: 1.6;
+		color: #666;
+	}
+	
+	/* [3. 푸터 영역] */
+	footer {
+		border-top: 1px solid #eee;
+		padding: 20px 0;
+		margin-top: 20px;
+		background-color: #fdfdfd;
+	}
+	
+	.footer-links {
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 13px;
+	}
+	
+	.footer-links span {
+		margin-right: 15px;
+	}
+	
+	.footer-info {
+		font-size: 11px;
+		color: #777;
+		line-height: 1.5;
+	}
+	
+	.copyright {
+		margin-top: 10px;
+		font-size: 10px;
+		color: #999;
+	}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+    <header>
+        <div class="banner">
+            <div class="wrap" style="position:relative; height:100%;">
+                <h1>교구본사</h1>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="wrap">
+                <ul>
+                    <li class="active">교구현황</li>
+                    <li>교구사찰</li>
+                    <li>종단/교구 공지사항</li>
+                    <li>교구소식</li>
+                    <li>산하기관</li>
+                    <li>지역성지와성보</li>
+                    <li>소식지</li>
+                    <li>말사소식</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2 class="page-title">교구현황</h2>
+
+        <div class="section-row">
+            <div class="section-head">교구장 도신스님</div>
+            <div class="section-body">
+                <div class="profile-info">
+                    <table class="info-table">
+                        <tr>
+                            <td class="label">주소</td>
+                            <td>충남 예산군 덕산면 사천리</td>
+                        </tr>
+                        <tr>
+                            <td class="label">전화</td>
+                            <td>000-000-0000</td>
+                        </tr>
+                        <tr>
+                            <td class="label">FAX</td>
+                            <td>000-000-0001</td>
+                        </tr>
+                        <tr>
+                            <td class="label">사찰</td>
+                            <td>관내:총 5개지역 47개 사찰 관외 25개</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-row">
+            <div class="section-head">지역사찰</div>
+            <div class="section-body">
+                <table class="temple-table">
+                    <colgroup>
+                        <col style="width: 10%;"> <col style="width: 10%;"> <col style="width: 35%;"> <col style="width: 45%;"> </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">지역</th>
+                            <th>주지협의회</th>
+                            <th>소속 사찰</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">관내</td>
+                            <td>예산</td>
+                            <td>
+                                예산지역주지협의회 회장:효성스님<br>
+                                -사찰:향천사
+                            </td>
+                            <td class="temple-list">향천사, 화암사, 대련사, 보덕사, 영각사</td>
+                        </tr>
+                        <tr>
+                            <td>홍성</td>
+                            <td>
+                                홍성지역주지협의회 회장:경보스님<br>
+                                -사찰:석련사
+                            </td>
+                            <td class="temple-list">산혜암, 고산사, 석련사, 내원사, 원광사</td>
+                        </tr>
+                        <tr>
+                            <td>서산</td>
+                            <td>
+                                서산지역주지협의회 회장:혜산스님<br>
+                                -사찰:개심사
+                            </td>
+                            <td class="temple-list">서광사, 삼길사, 개심사, 망일사, 부석사</td>
+                        </tr>
+                        <tr>
+                            <td>태안</td>
+                            <td>
+                                태안지역주지협의회 회장:효성스님<br>
+                                -사찰:공덕사
+                            </td>
+                            <td class="temple-list">태국사, 무량사, 태을암, 흥주사, 공덕사</td>
+                        </tr>
+                        <tr>
+                            <td>당진</td>
+                            <td>
+                                당진지역주지협의회 회장:상준스님<br>
+                                -사찰:영랑사
+                            </td>
+                            <td class="temple-list">영탑사, 영랑사, 성당사, 서원사, 정토사</td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2">관외</td>
+                            <td></td> <td class="temple-list">
+                                연화사, 정수사, 광제사, 금동암, 구봉원선<br>
+                                길상사, 봉화사, 선암사, 법계사, 세원사
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <div class="footer-links">
+                <span>수덕사</span>
+                <span>공지사항</span>
+                <span>찾아오시는길</span>
+            </div>
+            <div class="footer-info">
+                대한불교조계종 제7교구본사 덕숭총림 &nbsp;&nbsp; 충청남도 예산군 덕산면 수덕사안길 79(우)32409<br>
+                Tel. 000-0000-0000 &nbsp; FAX. 000-0000-0001 &nbsp; E-mail. AAAAA@BBB.CC
+            </div>
+            <div class="copyright">
+                COPYRIGHT © 2023 SANDE ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
